@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinceaños - Recuerdos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mis Quinceaños</h1>
+        </header>
+        
+        <!-- Botón para iniciar el audio -->
+        <button id="play-audio">Escuchame.</button>
+
+        <main>
+            <!-- Video inicial -->
+            <section class="video-section">
+                <div class="video-container">
+                    <video controls>
+                        <source src="video.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+                <div class="video-description">
+                    <!-- Descripción del video -->
+                    <p>Descripcion del Video. que lore pondra.</p>
+                </div>
+            </section>
+
+            <!-- Cuatro imágenes con descripciones -->
+            <section class="memory-section">
+                <div class="memory-image">
+                    <img src="imagen/20190628_222945.jpg" alt="Imagen 1">
+                </div>
+                <div class="memory-description">
+                    <p>Esta foto, fue tomada cuando jugaba con mi hermana Lia victoria, en un cumpleaños de un familiar.</p>
+                </div>
+            </section>
+
+            <section class="memory-section">
+                <div class="memory-image">
+                    <img src="imagen/WhatsApp Image 2025-01-05 at 9.13.06 PM (2).jpeg" alt="Imagen 2">
+                </div>
+                <div class="memory-description">
+                    <p>En esta foto Estaba paseando a mi hermana Rachel, y se estaba quedando dormida encima de mi cabeza.</p>
+                </div>
+            </section>
+
+            <section class="memory-section">
+                <div class="memory-image">
+                    <img src="imagen/1000203962.JPG" alt="Imagen 3">
+                </div>
+                <div class="memory-description">
+                    <p>En esta foto estaba Celebrando el cumpleaños de mi bisAbuelo Chive (me decia Lloreimy Hernandez) nos haces falta.</p>
+                </div>
+            </section>
+
+            <section class="memory-section">
+                <div class="memory-image">
+                    <img src="imagen/WhatsApp Image 2025-01-05 at 9.13.03 PM (3).jpeg" alt="Imagen 4">
+                </div>
+                <div class="memory-description">
+                    <p>En esta foto estaba celebrando fiestas patrias con mis primos.</p>
+                </div>
+            </section>
+
+            <!-- Sección de agradecimiento -->
+            <section class="thank-you-section">
+                <div class="thank-you-image">
+                    <img src="gracias.jpg" alt="Imagen de agradecimiento">
+                </div>
+                <div class="thank-you-description">
+                    <p>Gracias por asistir a mis quinceaños. Este día fue muy especial gracias a ti.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025. Leonardo Montenegro.</p>
+        </footer>
+    </div>
+
+    <!-- Audio oculto -->
+    <audio id="background-audio" style="display: none;">
+        <source src="imagen/Grabación.mp3" type="audio/mp3">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script>
+        // Seleccionar el botón y el audio
+        const button = document.getElementById('play-audio');
+        const audio = document.getElementById('background-audio');
+
+        // Agregar evento al botón
+        button.addEventListener('click', () => {
+            audio.play(); // Reproducir el audio
+            button.style.display = 'none'; // Ocultar el botón después de hacer clic
+        });
+    </script>
+</body>
+</html>

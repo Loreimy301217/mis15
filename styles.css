@@ -1,0 +1,216 @@
+/* Estilos generales */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fdf3f3;
+    margin: 0;
+    padding: 0;
+    color: #5d3b3b;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background-color: #ffc0cb;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px #d36b6b;
+}
+
+/* Botón de inicio de audio */
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff85c1;
+    transform: scale(1.1);
+}
+
+/* Sección de video */
+.video-section {
+    background-color: #fff;
+    border: 2px solid #ffc0cb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #d36b6b;
+    margin-bottom: 15px;
+}
+
+.video-description p {
+    font-size: 1.2em;
+    color: #5d3b3b;
+    font-style: italic;
+}
+
+/* Sección de recuerdos */
+.memory-section {
+    background-color: #fff;
+    border: 2px solid #ffc0cb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.memory-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #d36b6b;
+    margin-bottom: 10px;
+}
+
+.memory-description p {
+    font-size: 1.2em;
+    color: #5d3b3b;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Sección de agradecimiento */
+.thank-you-section {
+    background-color: #fff0f5;
+    border: 3px solid #ffc0cb;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.thank-you-image img {
+    max-width: 80%;
+    border-radius: 15px;
+    border: 3px solid #d36b6b;
+    margin-bottom: 15px;
+}
+
+.thank-you-description p {
+    font-size: 1.4em;
+    color: #5d3b3b;
+    font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffc0cb;
+    border-radius: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #d36b6b;
+    font-size: 0.9em;
+}
+
+/* --- Media Queries para Pantallas Móviles --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Reduce el tamaño del título */
+    }
+
+    .video-container video,
+    .memory-image img,
+    .thank-you-image img {
+        max-width: 90%; /* Ajusta imágenes y videos al 90% del ancho */
+    }
+
+    .video-description p,
+    .memory-description p,
+    .thank-you-description p {
+        font-size: 1em; /* Reduce el tamaño del texto */
+    }
+
+    .thank-you-section {
+        padding: 20px; /* Ajusta los márgenes y el relleno */
+    }
+
+    footer {
+        font-size: 0.8em; /* Reduce el tamaño del texto en el pie de página */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .video-container video,
+    .memory-image img,
+    .thank-you-image img {
+        max-width: 100%; /* Ocupa el ancho completo */
+    }
+
+    .video-description p,
+    .memory-description p,
+    .thank-you-description p {
+        font-size: 0.9em; /* Texto más compacto */
+    }
+
+    .thank-you-section {
+        padding: 15px; /* Reduce el relleno para pantallas pequeñas */
+    }
+
+    footer {
+        font-size: 0.7em; /* Texto pequeño para pie de página */
+    }
+}
+
+header h1 {
+    color: #ff69b4; /* Color base del texto */
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ff69b4;
+    animation: glow 1.5s infinite alternate, moveTitle 3s ease-in-out forwards;
+}
+
+/* Animación de brillo */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 20px #ff69b4;
+    }
+    100% {
+        text-shadow: 0 0 20px #ffd700, 0 0 30px #ff69b4, 0 0 40px #ff69b4;
+    }
+}
+
+/* Animación de movimiento */
+@keyframes moveTitle {
+    0% {
+        transform: translateX(-100px); /* Mueve el título hacia la izquierda */
+    }
+    50% {
+        transform: translateX(20px); /* Rebota ligeramente hacia la derecha */
+    }
+    100% {
+        transform: translateX(0); /* Regresa a su posición original */
+    }
+}
