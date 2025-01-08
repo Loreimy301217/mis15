@@ -214,3 +214,12 @@ header h1 {
         transform: translateX(0); /* Regresa a su posición original */
     }
 }
+
+.video-container iframe {
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 16 / 9; 
+    border-radius: 10px; 
+    border: 2px solid #d36b6b; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
